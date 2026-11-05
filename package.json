@@ -1,8 +1,17 @@
 {
   "name": "umlutt",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Kho lưu trữ Agent Skills chuẩn hóa bằng tiếng Việt dành cho các AI Coding Agents",
   "type": "module",
+  "author": "tira-mis-u <trisnosleep@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tira-mis-u/umlutt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tira-mis-u/umlutt/issues"
+  },
+  "homepage": "https://github.com/tira-mis-u/umlutt#readme",
   "bin": {
     "umlutt": "./bin/cli.mjs",
     "utt": "./bin/cli.mjs"

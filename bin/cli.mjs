@@ -18,7 +18,7 @@ const __dirname = path.dirname(__filename);
 const PACKAGE_ROOT = path.resolve(__dirname, '..');
 
 // Read version from package.json
-let PACKAGE_VERSION = '0.1.0';
+let PACKAGE_VERSION = '0.1.1';
 try {
   const pkgData = JSON.parse(fs.readFileSync(path.join(PACKAGE_ROOT, 'package.json'), 'utf-8'));
   PACKAGE_VERSION = pkgData.version || PACKAGE_VERSION;
