@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0" type="device">
+  <diagram id="Test02" name="ContainerChild">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Container Boundary -->
+        <mxCell id="container-boundary" value="System Boundary" vertex="1" parent="1" style="shape=rect;rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;verticalAlign=top;align=left;fontColor=#000000;">
+          <mxGeometry x="100" y="50" width="500" height="350" as="geometry" />
+        </mxCell>
+        <!-- Child Node fully inside container -->
+        <mxCell id="child-uc-01" value="DatHangOnline" vertex="1" parent="container-boundary" style="ellipse;whiteSpace=wrap;html=1;">
+          <mxGeometry x="150" y="100" width="140" height="60" as="geometry" />
+        </mxCell>
+        <!-- Second Child Node fully inside container -->
+        <mxCell id="child-uc-02" value="TheoDoiDonHang" vertex="1" parent="container-boundary" style="ellipse;whiteSpace=wrap;html=1;">
+          <mxGeometry x="150" y="220" width="140" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+

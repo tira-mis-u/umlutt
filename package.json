@@ -1,0 +1,25 @@
+{
+  "name": "viet-agent-skills",
+  "version": "0.1.0",
+  "description": "Kho lưu trữ Agent Skills chuẩn hóa bằng tiếng Việt dành cho các AI Coding Agents",
+  "type": "module",
+  "scripts": {
+    "test": "node .agents/skills/draw-diagram/tests/test_targeted_mappings.mjs && node .agents/skills/draw-diagram/tests/test_e2e_pipeline.mjs",
+    "test:targeted": "node .agents/skills/draw-diagram/tests/test_targeted_mappings.mjs",
+    "test:pwsh": "powershell -ExecutionPolicy Bypass -File .agents/skills/draw-diagram/tests/run_tests.ps1",
+    "test:e2e": "node .agents/skills/draw-diagram/tests/test_e2e_pipeline.mjs",
+    "test:all": "npm test && npm run test:pwsh",
+    "export": "node scripts/export_diagram.mjs"
+  },
+  "keywords": [
+    "agent-skills",
+    "ai-agent",
+    "antigravity",
+    "claude-code",
+    "codex",
+    "drawio",
+    "uml",
+    "vietnamese"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0" type="device">
+  <diagram id="SequenceDiagramExample" name="SequenceDiagramExample">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Lifeline 1: KhachHang -->
+        <mxCell id="seq-kh"
+                value="KhachHang"
+                vertex="1"
+                parent="1"
+                style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontStyle=1;">
+          <mxGeometry x="80" y="50" width="100" height="380" as="geometry" />
+        </mxCell>
+
+        <!-- Lifeline 2: DonHangController -->
+        <mxCell id="seq-ctrl"
+                value="DonHangController"
+                vertex="1"
+                parent="1"
+                style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontStyle=1;">
+          <mxGeometry x="320" y="50" width="140" height="380" as="geometry" />
+        </mxCell>
+
+        <!-- Lifeline 3: DonHangService -->
+        <mxCell id="seq-srv"
+                value="DonHangService"
+                vertex="1"
+                parent="1"
+                style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontStyle=1;">
+          <mxGeometry x="560" y="50" width="140" height="380" as="geometry" />
+        </mxCell>
+
+        <!-- Lifeline 4: DonHangRepository -->
+        <mxCell id="seq-repo"
+                value="DonHangRepository"
+                vertex="1"
+                parent="1"
+                style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontStyle=1;">
+          <mxGeometry x="800" y="50" width="150" height="380" as="geometry" />
+        </mxCell>
+
+        <!-- 1. Sync Call: TaoDonHang (kh -> ctrl at y=100) -->
+        <mxCell id="msg-sync-1"
+                value="TaoDonHang"
+                edge="1"
+                parent="1"
+                source="seq-kh"
+                target="seq-ctrl"
+                style="html=1;verticalAlign=bottom;endArrow=classic;endFill=1;endSize=8;exitX=0.5;exitY=0.1316;entryX=0.5;entryY=0.1316;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 2. Sync Call: XuLyTaoDon (ctrl -> srv at y=140) -->
+        <mxCell id="msg-sync-2"
+                value="XuLyTaoDon"
+                edge="1"
+                parent="1"
+                source="seq-ctrl"
+                target="seq-srv"
+                style="html=1;verticalAlign=bottom;endArrow=classic;endFill=1;endSize=8;exitX=0.5;exitY=0.2368;entryX=0.5;entryY=0.2368;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 3. Self Call: KiemTraHopLe (srv -> srv at y=180-210) -->
+        <mxCell id="msg-self-1"
+                value="KiemTraHopLe"
+                edge="1"
+                parent="1"
+                source="seq-srv"
+                target="seq-srv"
+                style="html=1;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=classic;endFill=1;endSize=8;exitX=0.5;exitY=0.3421;entryX=0.5;entryY=0.4211;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="670" y="180" />
+              <mxPoint x="670" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 4. Sync Call: LuuDonHang (srv -> repo at y=240) -->
+        <mxCell id="msg-sync-3"
+                value="LuuDonHang"
+                edge="1"
+                parent="1"
+                source="seq-srv"
+                target="seq-repo"
+                style="html=1;verticalAlign=bottom;endArrow=classic;endFill=1;endSize=8;exitX=0.5;exitY=0.5;entryX=0.5;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 5. Reply: KetQuaLuu (repo -> srv at y=280) -->
+        <mxCell id="msg-reply-1"
+                value="KetQuaLuu"
+                edge="1"
+                parent="1"
+                source="seq-repo"
+                target="seq-srv"
+                style="html=1;verticalAlign=bottom;dashed=1;dashPattern=4 4;endArrow=open;endFill=0;endSize=8;exitX=0.5;exitY=0.6053;entryX=0.5;entryY=0.6053;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 6. Reply: KetQuaDonHang (srv -> ctrl at y=320) -->
+        <mxCell id="msg-reply-2"
+                value="KetQuaDonHang"
+                edge="1"
+                parent="1"
+                source="seq-srv"
+                target="seq-ctrl"
+                style="html=1;verticalAlign=bottom;dashed=1;dashPattern=4 4;endArrow=open;endFill=0;endSize=8;exitX=0.5;exitY=0.7105;entryX=0.5;entryY=0.7105;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 7. Async: GuiThongBaoDatHang (ctrl -> kh at y=360) -->
+        <mxCell id="msg-async-1"
+                value="GuiThongBaoDatHang"
+                edge="1"
+                parent="1"
+                source="seq-ctrl"
+                target="seq-kh"
+                style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;endSize=8;exitX=0.5;exitY=0.8158;entryX=0.5;entryY=0.8158;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

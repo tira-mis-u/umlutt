@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0" type="device">
+  <diagram id="Test25" name="MultilineTextHeightOverflow">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Node with 5 explicit lines but height only 40 px. Est height 84 px exceeds available height 34 px. Must trigger Text Overflow Risk warning -->
+        <mxCell id="node25-multiline-overflow" value="Item 1&lt;br/&gt;Item 2&lt;br/&gt;Item 3&lt;br/&gt;Item 4&lt;br/&gt;Item 5" vertex="1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;">
+          <mxGeometry x="100" y="100" width="120" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

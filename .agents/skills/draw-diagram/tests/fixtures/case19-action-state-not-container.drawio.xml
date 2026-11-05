@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0" type="device">
+  <diagram id="Test19" name="ActionStateNotContainer">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Action node (rounded=1) on parent=1. Must NOT be treated as a container -->
+        <mxCell id="action-outer" value="OuterAction" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;">
+          <mxGeometry x="100" y="100" width="220" height="140" as="geometry" />
+        </mxCell>
+        <!-- Second independent Action node nested inside OuterAction on parent=1 -->
+        <mxCell id="action-inner" value="InnerAction" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;">
+          <mxGeometry x="130" y="120" width="100" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0" type="device">
+  <diagram id="Test14" name="ContainerChildOOB">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Container Boundary -->
+        <mxCell id="container-box" value="System Boundary" vertex="1" parent="1" style="shape=rect;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;">
+          <mxGeometry x="100" y="50" width="400" height="300" as="geometry" />
+        </mxCell>
+        <!-- Child cell extending out of container boundary -->
+        <mxCell id="child-oob-01" value="OutOfBoundChild" vertex="1" parent="container-box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;">
+          <mxGeometry x="450" y="100" width="150" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+

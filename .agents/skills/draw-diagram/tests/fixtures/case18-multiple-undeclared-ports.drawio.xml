@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0" type="device">
+  <diagram id="Test18" name="MultipleUndeclaredPorts">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="node-center-hub" value="CenterHub" vertex="1" parent="1" style="shape=umlActor;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;">
+          <mxGeometry x="250" y="200" width="40" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="target-1" value="Target1" vertex="1" parent="1" style="ellipse;whiteSpace=wrap;html=1;">
+          <mxGeometry x="50" y="50" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="target-2" value="Target2" vertex="1" parent="1" style="ellipse;whiteSpace=wrap;html=1;">
+          <mxGeometry x="450" y="50" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="target-3" value="Target3" vertex="1" parent="1" style="ellipse;whiteSpace=wrap;html=1;">
+          <mxGeometry x="50" y="350" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="target-4" value="Target4" vertex="1" parent="1" style="ellipse;whiteSpace=wrap;html=1;">
+          <mxGeometry x="450" y="350" width="120" height="50" as="geometry" />
+        </mxCell>
+        <!-- 4 edges with undeclared ports (relying on Draw.io dynamic perimeter routing) -->
+        <!-- Must NOT trigger Port Congestion false warning -->
+        <mxCell id="edge-uc-1" edge="1" parent="1" source="node-center-hub" target="target-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-uc-2" edge="1" parent="1" source="node-center-hub" target="target-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-uc-3" edge="1" parent="1" source="node-center-hub" target="target-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-uc-4" edge="1" parent="1" source="node-center-hub" target="target-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+

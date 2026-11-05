@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0" type="device">
+  <diagram id="Test13" name="PortCongestion">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="actor-src" value="Actor1" vertex="1" parent="1" style="shape=umlActor;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;">
+          <mxGeometry x="50" y="150" width="40" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-tgt-1" value="UseCase1" vertex="1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;">
+          <mxGeometry x="300" y="50" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-tgt-2" value="UseCase2" vertex="1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;">
+          <mxGeometry x="300" y="150" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-tgt-3" value="UseCase3" vertex="1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;">
+          <mxGeometry x="300" y="250" width="140" height="60" as="geometry" />
+        </mxCell>
+        <!-- 3 edges congested on identical exit port (1, 0.5) -->
+        <mxCell id="edge-c1" edge="1" parent="1" source="actor-src" target="uc-tgt-1" style="edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-c2" edge="1" parent="1" source="actor-src" target="uc-tgt-2" style="edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-c3" edge="1" parent="1" source="actor-src" target="uc-tgt-3" style="edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+

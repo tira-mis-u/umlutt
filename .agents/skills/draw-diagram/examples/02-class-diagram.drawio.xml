@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0" type="device">
+  <diagram id="ClassDiagramExample" name="ClassDiagramExample">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Class 1: KhachHang -->
+        <mxCell id="class-kh"
+                value="&lt;p style=&quot;margin:0px;text-align:center;&quot;&gt;&lt;b&gt;KhachHang&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:0px;&quot;&gt;- maKhachHang: String&lt;br&gt;- hoTen: String&lt;br&gt;- email: String&lt;br&gt;- soDienThoai: String&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:0px;&quot;&gt;+ dangNhap(): Boolean&lt;br&gt;+ xemLichSuMua(): List&lt;/p&gt;"
+                vertex="1"
+                parent="1"
+                style="shape=rect;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;">
+          <mxGeometry x="60" y="80" width="220" height="170" as="geometry" />
+        </mxCell>
+
+        <!-- Class 2: DonHang -->
+        <mxCell id="class-dh"
+                value="&lt;p style=&quot;margin:0px;text-align:center;&quot;&gt;&lt;b&gt;DonHang&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:0px;&quot;&gt;- maDonHang: String&lt;br&gt;- ngayDat: Date&lt;br&gt;- tongTien: Double&lt;br&gt;- trangThai: String&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:0px;&quot;&gt;+ taoDonHang(): Boolean&lt;br&gt;+ tinhTongTien(): Double&lt;br&gt;+ huyDonHang(): Boolean&lt;/p&gt;"
+                vertex="1"
+                parent="1"
+                style="shape=rect;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;">
+          <mxGeometry x="380" y="80" width="240" height="180" as="geometry" />
+        </mxCell>
+
+        <!-- Class 3: ChiTietDonHang -->
+        <mxCell id="class-ctdh"
+                value="&lt;p style=&quot;margin:0px;text-align:center;&quot;&gt;&lt;b&gt;ChiTietDonHang&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:0px;&quot;&gt;- maChiTiet: String&lt;br&gt;- soLuong: Integer&lt;br&gt;- donGia: Double&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:0px;&quot;&gt;+ tinhThanhTien(): Double&lt;/p&gt;"
+                vertex="1"
+                parent="1"
+                style="shape=rect;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;">
+          <mxGeometry x="720" y="80" width="220" height="150" as="geometry" />
+        </mxCell>
+
+        <!-- Class 4: SanPham -->
+        <mxCell id="class-sp"
+                value="&lt;p style=&quot;margin:0px;text-align:center;&quot;&gt;&lt;b&gt;SanPham&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:0px;&quot;&gt;- maSanPham: String&lt;br&gt;- tenSanPham: String&lt;br&gt;- giaBan: Double&lt;br&gt;- soLuongTon: Integer&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:0px;&quot;&gt;+ kiemTraTonKho(): Boolean&lt;br&gt;+ capNhatTonKho()&lt;/p&gt;"
+                vertex="1"
+                parent="1"
+                style="shape=rect;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;">
+          <mxGeometry x="720" y="320" width="220" height="170" as="geometry" />
+        </mxCell>
+
+        <!-- Association: KhachHang - DonHang (1 .. 0..*) -->
+        <mxCell id="edge-kh-dh"
+                value=""
+                edge="1"
+                parent="1"
+                source="class-kh"
+                target="class-dh"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Composition: DonHang (whole) *== ChiTietDonHang (part) -->
+        <mxCell id="edge-dh-ctdh"
+                value=""
+                edge="1"
+                parent="1"
+                source="class-ctdh"
+                target="class-dh"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=diamond;endFill=1;endSize=12;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Association: ChiTietDonHang - SanPham -->
+        <mxCell id="edge-ctdh-sp"
+                value=""
+                edge="1"
+                parent="1"
+                source="class-ctdh"
+                target="class-sp"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

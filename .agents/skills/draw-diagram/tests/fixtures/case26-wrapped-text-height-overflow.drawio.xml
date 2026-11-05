@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0" type="device">
+  <diagram id="Test26" name="WrappedTextHeightOverflow">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Node with wrapped long text. Available width 68 px, available height 24 px. Text wraps into ~10 visual lines, est height 168 px >> 24 px. Must trigger Text Overflow Risk warning -->
+        <mxCell id="node26-wrap-overflow" value="This is a very long descriptive requirement text that must wrap across multiple lines" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;">
+          <mxGeometry x="100" y="100" width="80" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

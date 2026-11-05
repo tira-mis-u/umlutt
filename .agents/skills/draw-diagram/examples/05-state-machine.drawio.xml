@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0" type="device">
+  <diagram id="StateMachineExample" name="StateMachineExample">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Initial Pseudostate -->
+        <mxCell id="state-init"
+                value=""
+                vertex="1"
+                parent="1"
+                style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#000000;">
+          <mxGeometry x="50" y="100" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- State 1: ChoXacNhan -->
+        <mxCell id="state-cho-xac-nhan"
+                value="ChoXacNhan"
+                vertex="1"
+                parent="1"
+                style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;align=center;verticalAlign=middle;">
+          <mxGeometry x="130" y="90" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- State 2: DangXuLy -->
+        <mxCell id="state-dang-xu-ly"
+                value="DangXuLy"
+                vertex="1"
+                parent="1"
+                style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;align=center;verticalAlign=middle;">
+          <mxGeometry x="370" y="90" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- State 3: DangGiaoHang -->
+        <mxCell id="state-dang-giao"
+                value="DangGiaoHang"
+                vertex="1"
+                parent="1"
+                style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;align=center;verticalAlign=middle;">
+          <mxGeometry x="610" y="90" width="130" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- State 4: DaHoanThanh -->
+        <mxCell id="state-hoan-thanh"
+                value="DaHoanThanh"
+                vertex="1"
+                parent="1"
+                style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;align=center;verticalAlign=middle;">
+          <mxGeometry x="860" y="90" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Final State 1 -->
+        <mxCell id="state-final-1"
+                value=""
+                vertex="1"
+                parent="1"
+                style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;">
+          <mxGeometry x="1050" y="100" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- State 5: DaHuy -->
+        <mxCell id="state-da-huy"
+                value="DaHuy"
+                vertex="1"
+                parent="1"
+                style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;align=center;verticalAlign=middle;">
+          <mxGeometry x="370" y="230" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Final State 2 (Cancelled) -->
+        <mxCell id="state-final-2"
+                value=""
+                vertex="1"
+                parent="1"
+                style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;">
+          <mxGeometry x="610" y="240" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Edge 1: Init -> ChoXacNhan -->
+        <mxCell id="edge-init-cho"
+                value=""
+                edge="1"
+                parent="1"
+                source="state-init"
+                target="state-cho-xac-nhan"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=8;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Edge 2: ChoXacNhan -> DangXuLy -->
+        <mxCell id="edge-cho-xuly"
+                value="xacNhan [hopLe]"
+                edge="1"
+                parent="1"
+                source="state-cho-xac-nhan"
+                target="state-dang-xu-ly"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=8;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Edge 3: DangXuLy -> DangGiao -->
+        <mxCell id="edge-xuly-giao"
+                value="xuatKho / taoVanDon"
+                edge="1"
+                parent="1"
+                source="state-dang-xu-ly"
+                target="state-dang-giao"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=8;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-36" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Edge 4: DangGiao -> DaHoanThanh -->
+        <mxCell id="edge-giao-hoanthanh"
+                value="giaoThanhCong"
+                edge="1"
+                parent="1"
+                source="state-dang-giao"
+                target="state-hoan-thanh"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=8;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Edge 5: DaHoanThanh -> Final -->
+        <mxCell id="edge-hoanthanh-final"
+                value=""
+                edge="1"
+                parent="1"
+                source="state-hoan-thanh"
+                target="state-final-1"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=8;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Edge 6: ChoXacNhan -> DaHuy -->
+        <mxCell id="edge-cho-huy"
+                value="khachHuyDon"
+                edge="1"
+                parent="1"
+                source="state-cho-xac-nhan"
+                target="state-da-huy"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=8;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Edge 7: DaHuy -> Final 2 -->
+        <mxCell id="edge-dahuy-final"
+                value=""
+                edge="1"
+                parent="1"
+                source="state-da-huy"
+                target="state-final-2"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=8;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

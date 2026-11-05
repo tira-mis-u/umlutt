@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0" type="device">
+  <diagram id="Test06" name="EdgeEdgeOverlap">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="node-1" value="Node1" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;">
+          <mxGeometry x="50" y="80" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="node-2" value="Node2" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;">
+          <mxGeometry x="50" y="200" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="node-3" value="Node3" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;">
+          <mxGeometry x="400" y="80" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="node-4" value="Node4" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;">
+          <mxGeometry x="400" y="200" width="80" height="40" as="geometry" />
+        </mxCell>
+        <!-- Edge 1 routed through (200, 150) to (300, 150) -->
+        <mxCell id="edge-1" value="" edge="1" parent="1" source="node-1" target="node-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="100" />
+              <mxPoint x="200" y="150" />
+              <mxPoint x="300" y="150" />
+              <mxPoint x="300" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <!-- Edge 2 also routed through (200, 150) to (300, 150) - 100px overlap! -->
+        <mxCell id="edge-2" value="" edge="1" parent="1" source="node-2" target="node-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="220" />
+              <mxPoint x="200" y="150" />
+              <mxPoint x="300" y="150" />
+              <mxPoint x="300" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0" type="device">
+  <diagram id="DeploymentDiagramExample" name="DeploymentDiagramExample">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Node 1: MayKhach (Client PC / Mobile) -->
+        <mxCell id="node-client"
+                value="&amp;laquo;device&amp;raquo;&#xa;MayKhach"
+                vertex="1"
+                parent="1"
+                style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;size=16;align=center;verticalAlign=top;spacingTop=8;fontStyle=1;container=1;collapsible=0;">
+          <mxGeometry x="60" y="80" width="220" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="env-browser"
+                value="&amp;laquo;execution environment&amp;raquo;&#xa;TrinhDuyetWeb"
+                vertex="1"
+                parent="node-client"
+                style="shape=rect;whiteSpace=wrap;html=1;verticalAlign=top;spacingTop=6;fontStyle=1;fillColor=none;container=1;collapsible=0;">
+          <mxGeometry x="20" y="60" width="180" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="art-web"
+                value="&amp;laquo;artifact&amp;raquo;&#xa;WebClient.bundle.js"
+                vertex="1"
+                parent="env-browser"
+                style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0;size=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="20" y="60" width="140" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- Node 2: MayChuUngDung (App Server) -->
+        <mxCell id="node-app"
+                value="&amp;laquo;device&amp;raquo;&#xa;MayChuUngDung"
+                vertex="1"
+                parent="1"
+                style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;size=16;align=center;verticalAlign=top;spacingTop=8;fontStyle=1;container=1;collapsible=0;">
+          <mxGeometry x="400" y="80" width="260" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="env-node"
+                value="&amp;laquo;execution environment&amp;raquo;&#xa;Node.js Runtime"
+                vertex="1"
+                parent="node-app"
+                style="shape=rect;whiteSpace=wrap;html=1;verticalAlign=top;spacingTop=6;fontStyle=1;fillColor=none;container=1;collapsible=0;">
+          <mxGeometry x="20" y="60" width="220" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="art-app"
+                value="&amp;laquo;artifact&amp;raquo;&#xa;OrderService.api.mjs"
+                vertex="1"
+                parent="env-node"
+                style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0;size=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="20" y="60" width="180" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- Node 3: MayChuCoSoDuLieu (DB Server) -->
+        <mxCell id="node-db"
+                value="&amp;laquo;device&amp;raquo;&#xa;MayChuCoSoDuLieu"
+                vertex="1"
+                parent="1"
+                style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;size=16;align=center;verticalAlign=top;spacingTop=8;fontStyle=1;container=1;collapsible=0;">
+          <mxGeometry x="780" y="80" width="260" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="env-db"
+                value="&amp;laquo;execution environment&amp;raquo;&#xa;PostgreSQL DBMS"
+                vertex="1"
+                parent="node-db"
+                style="shape=rect;whiteSpace=wrap;html=1;verticalAlign=top;spacingTop=6;fontStyle=1;fillColor=none;container=1;collapsible=0;">
+          <mxGeometry x="20" y="60" width="220" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="art-db"
+                value="&amp;laquo;artifact&amp;raquo;&#xa;schema_don_hang.sql"
+                vertex="1"
+                parent="env-db"
+                style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0;size=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="20" y="60" width="180" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- Communication Path 1: Client to App Server («HTTPS / Port 443») -->
+        <mxCell id="comm-client-app"
+                value="&amp;laquo;HTTPS / Port 443&amp;raquo;"
+                edge="1"
+                parent="1"
+                source="node-client"
+                target="node-app"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Communication Path 2: App Server to DB Server («TCP / Port 5432») -->
+        <mxCell id="comm-app-db"
+                value="&amp;laquo;TCP / Port 5432&amp;raquo;"
+                edge="1"
+                parent="1"
+                source="node-app"
+                target="node-db"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

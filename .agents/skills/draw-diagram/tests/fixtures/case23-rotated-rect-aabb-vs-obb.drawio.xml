@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0" type="device">
+  <diagram id="Test23" name="RotatedRectAabbVsObb">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Node 1: Diamond rotated 45 degrees, center at (100, 100), width=60, height=60 -->
+        <!-- Rotated boundary satisfies x + y <= 242.4 in lower-right quadrant. AABB extends to x=142.4, y=142.4 -->
+        <mxCell id="diamond-node" value="RotatedDiamond" vertex="1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rotation=45;">
+          <mxGeometry x="70" y="70" width="60" height="60" as="geometry" />
+        </mxCell>
+        <!-- Node 2: Unrotated rectangle at (135, 135, 40, 40). Closest corner (135, 135) has x+y=270 > 242.4 -->
+        <!-- AABB overlaps in [135, 142.4] x [135, 142.4], but OBBs have ~19.5px separation gap -->
+        <!-- Must NOT trigger False Positive Node-Node Collision -->
+        <mxCell id="corner-node" value="Node" vertex="1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;">
+          <mxGeometry x="135" y="135" width="50" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

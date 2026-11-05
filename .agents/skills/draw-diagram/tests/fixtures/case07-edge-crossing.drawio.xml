@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0" type="device">
+  <diagram id="Test07" name="EdgeCrossing">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="node-left" value="Left" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;">
+          <mxGeometry x="50" y="150" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="node-right" value="Right" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;">
+          <mxGeometry x="400" y="150" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="node-top" value="Top" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;">
+          <mxGeometry x="210" y="50" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="node-bottom" value="Bottom" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;">
+          <mxGeometry x="210" y="270" width="80" height="40" as="geometry" />
+        </mxCell>
+        <!-- Horizontal Edge from Left to Right at y=170 -->
+        <mxCell id="edge-h" value="" edge="1" parent="1" source="node-left" target="node-right" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Vertical Edge from Top to Bottom at x=250, crosses edge-h at (250, 170) -->
+        <mxCell id="edge-v" value="" edge="1" parent="1" source="node-top" target="node-bottom" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+

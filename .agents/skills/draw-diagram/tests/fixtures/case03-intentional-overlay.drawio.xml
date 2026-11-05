@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0" type="device">
+  <diagram id="Test03" name="IntentionalOverlay">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Control Card Panel -->
+        <mxCell id="control-card" value="Card Panel" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;">
+          <mxGeometry x="100" y="100" width="240" height="140" as="geometry" />
+        </mxCell>
+        <!-- Intentional Icon Overlay inside the Card -->
+        <mxCell id="card-icon" value="Icon" vertex="1" parent="1" style="shape=image;intentional_overlay=1;whiteSpace=wrap;html=1;">
+          <mxGeometry x="120" y="120" width="32" height="32" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+

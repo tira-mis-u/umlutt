@@ -1,0 +1,45 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+Desktop.ini
+
+# Node / Package managers
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+
+# IDE & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Tệp cấu hình biến môi trường cục bộ
+.env
+.env.*
+.env.local
+.env.*.local
+
+# AI Agents - Trạng thái cá nhân, dữ liệu phiên và cấu hình cục bộ (không chia sẻ qua VCS)
+.claude.json
+.claude/projects/
+.claude/*.local.json
+.gemini/history/
+.gemini/sessions/
+.gemini/*.local.json
+.codex/sessions/
+.codex/*.local.json
+
+

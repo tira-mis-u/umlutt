@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0" type="device">
+  <diagram id="Test08" name="EdgeLabelCollision">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="node-a" value="NodeA" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;">
+          <mxGeometry x="50" y="100" width="80" height="40" as="geometry" />
+        </mxCell>
+        <!-- Obstacle node right where the label is placed -->
+        <mxCell id="node-obstacle" value="ObstacleNode" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;">
+          <mxGeometry x="220" y="100" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="node-b" value="NodeB" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;">
+          <mxGeometry x="450" y="100" width="80" height="40" as="geometry" />
+        </mxCell>
+        <!-- Edge bypassing above at y=60, but label offset placed right on obstacle at (290, 115) -->
+        <mxCell id="edge-with-label" value="" edge="1" parent="1" source="node-a" target="node-b" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="90" y="60" />
+              <mxPoint x="490" y="60" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <!-- In mxGraph, x=0 indicates the midpoint of the edge polyline (which is at x=290, y=60). -->
+        <!-- Offset (0, 55) shifts the label center downwards to (290, 115), directly overlapping node-obstacle (x:220..320, y:100..140). -->
+        <mxCell id="label-colliding" value="&lt;&lt;include&gt;&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="edge-with-label">
+          <mxGeometry x="0" y="0" relative="1" as="geometry">
+            <mxPoint x="0" y="55" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+

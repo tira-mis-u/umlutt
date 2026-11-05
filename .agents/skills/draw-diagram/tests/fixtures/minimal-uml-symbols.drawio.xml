@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0" type="device">
+  <diagram id="MinimalUmlSymbolsTest" name="MinimalUmlSymbols">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ========================================== -->
+        <!-- 1. USE CASE NOTATION                       -->
+        <!-- ========================================== -->
+        <!-- Actor Sub (Child) -->
+        <mxCell id="actor-sub"
+                value="QuanLy"
+                vertex="1"
+                parent="1"
+                style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;">
+          <mxGeometry x="50" y="50" width="30" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Actor Base (Parent) -->
+        <mxCell id="actor-base"
+                value="NhanVien"
+                vertex="1"
+                parent="1"
+                style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;">
+          <mxGeometry x="50" y="180" width="30" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 2. Use Case Generalization: Child -> Parent (classic;endFill=0) -->
+        <mxCell id="edge-uc-generalization"
+                value=""
+                edge="1"
+                parent="1"
+                source="actor-sub"
+                target="actor-base"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=0;endSize=10;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Base Use Case -->
+        <mxCell id="uc-base"
+                value="DatHang"
+                vertex="1"
+                parent="1"
+                style="ellipse;whiteSpace=wrap;html=1;">
+          <mxGeometry x="150" y="50" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 1. Use Case Association: Actor - Use Case (none/none) -->
+        <mxCell id="edge-uc-assoc"
+                value=""
+                edge="1"
+                parent="1"
+                source="actor-sub"
+                target="uc-base"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Included Use Case -->
+        <mxCell id="uc-included"
+                value="XacThuc"
+                vertex="1"
+                parent="1"
+                style="ellipse;whiteSpace=wrap;html=1;">
+          <mxGeometry x="340" y="50" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 3. Use Case Include: Base -> Included (dashed=1;endArrow=open) -->
+        <mxCell id="edge-uc-include"
+                value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;"
+                edge="1"
+                parent="1"
+                source="uc-base"
+                target="uc-included"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=5 5;endArrow=open;endSize=8;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Extending Use Case -->
+        <mxCell id="uc-extending"
+                value="ThanhToanVi"
+                vertex="1"
+                parent="1"
+                style="ellipse;whiteSpace=wrap;html=1;">
+          <mxGeometry x="150" y="160" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 4. Use Case Extend: Extending -> Base (dashed=1;endArrow=open) -->
+        <mxCell id="edge-uc-extend"
+                value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;"
+                edge="1"
+                parent="1"
+                source="uc-extending"
+                target="uc-base"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=5 5;endArrow=open;endSize=8;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- 2. ACTIVITY NOTATION                       -->
+        <!-- ========================================== -->
+        <!-- Activity Action 1 -->
+        <mxCell id="act-1"
+                value="KiemTraDon"
+                vertex="1"
+                parent="1"
+                style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;">
+          <mxGeometry x="50" y="270" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- 6. Activity Decision/Merge: Rhombus -->
+        <mxCell id="act-decision"
+                value=""
+                vertex="1"
+                parent="1"
+                style="rhombus;whiteSpace=wrap;html=1;">
+          <mxGeometry x="190" y="270" width="40" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- 5. Activity Control Flow: Action -> Decision (endArrow=open;endFill=0) -->
+        <mxCell id="edge-act-flow1"
+                value=""
+                edge="1"
+                parent="1"
+                source="act-1"
+                target="act-decision"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=8;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 7. Activity Fork/Join: Solid synchronization bar -->
+        <mxCell id="act-fork"
+                value=""
+                vertex="1"
+                parent="1"
+                style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;">
+          <mxGeometry x="270" y="260" width="10" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge-act-flow2"
+                value="[hopLe]"
+                edge="1"
+                parent="1"
+                source="act-decision"
+                target="act-fork"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=8;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 8. Activity Flow Final: Circle container with inscribed diagonal line vertices (Default Style) -->
+        <!-- Parent circle: canvas coordinates x=340,y=275,w=30,h=30. Center at local (15,15). -->
+        <mxCell id="act-flow-final"
+                value=""
+                vertex="1"
+                connectable="1"
+                parent="1"
+                style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;container=1;collapsible=0;">
+          <mxGeometry x="340" y="275" width="30" height="30" as="geometry" />
+        </mxCell>
+        <!-- Diagonal lines: LOCAL coordinates relative to parent container. -->
+        <!-- Center at local (15,15). Width=30 (diameter) = full chord through center. -->
+        <!-- Anchored at x=0,y=14 so vertical midpoint y=14+1=15 = local center. -->
+        <!-- rotation=45 rotates around shape center, endpoints reach circle perimeter. -->
+        <mxCell id="flow-final-diag1"
+                value=""
+                vertex="1"
+                connectable="0"
+                parent="act-flow-final"
+                style="shape=line;rotation=45;html=1;">
+          <mxGeometry x="0" y="14" width="30" height="2" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-final-diag2"
+                value=""
+                vertex="1"
+                connectable="0"
+                parent="act-flow-final"
+                style="shape=line;rotation=-45;html=1;">
+          <mxGeometry x="0" y="14" width="30" height="2" as="geometry" />
+        </mxCell>
+
+        <!-- Control flow into Flow Final (targets circle, NOT diagonal lines) -->
+        <mxCell id="edge-act-to-final"
+                value=""
+                edge="1"
+                parent="1"
+                source="act-fork"
+                target="act-flow-final"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=8;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- 3. STATE MACHINE NOTATION                  -->
+        <!-- ========================================== -->
+        <!-- State 1 -->
+        <mxCell id="state-1"
+                value="ChoXacNhan"
+                vertex="1"
+                parent="1"
+                style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;">
+          <mxGeometry x="50" y="370" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- State 2 -->
+        <mxCell id="state-2"
+                value="DangGiao"
+                vertex="1"
+                parent="1"
+                style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;">
+          <mxGeometry x="220" y="370" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- 9. State Transition: trigger [guard] / effect (endArrow=open;endFill=0) -->
+        <mxCell id="edge-state-trans"
+                value="xacNhan [hopLe] / ghiNhan()"
+                edge="1"
+                parent="1"
+                source="state-1"
+                target="state-2"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=8;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- 4. SEQUENCE NOTATION                       -->
+        <!-- ========================================== -->
+        <!-- Participant 1 -->
+        <mxCell id="seq-p1"
+                value="KhachHang"
+                vertex="1"
+                parent="1"
+                style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontStyle=1;">
+          <mxGeometry x="500" y="50" width="100" height="300" as="geometry" />
+        </mxCell>
+
+        <!-- Participant 2 -->
+        <mxCell id="seq-p2"
+                value="DonHangController"
+                vertex="1"
+                parent="1"
+                style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontStyle=1;">
+          <mxGeometry x="670" y="50" width="120" height="260" as="geometry" />
+        </mxCell>
+
+        <!-- 10. Sequence Synchronous Call: classic;endFill=1 (solid line, filled triangle) -->
+        <mxCell id="edge-seq-sync"
+                value="TaoDonHang"
+                edge="1"
+                parent="1"
+                source="seq-p1"
+                target="seq-p2"
+                style="html=1;verticalAlign=bottom;endArrow=classic;endFill=1;endSize=8;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="100" as="sourcePoint" />
+            <mxPoint x="730" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 13. Sequence Self-message: loopback on seq-p2 -->
+        <mxCell id="edge-seq-self"
+                value="KiemTraHopLe"
+                edge="1"
+                parent="1"
+                source="seq-p2"
+                target="seq-p2"
+                style="html=1;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=classic;endFill=1;endSize=8;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="735" y="130" as="sourcePoint" />
+            <mxPoint x="735" y="160" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="770" y="130" />
+              <mxPoint x="770" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 11. Sequence Asynchronous Message: endArrow=open;endFill=0 (solid line, open arrow) -->
+        <mxCell id="edge-seq-async"
+                value="GuiThongBao"
+                edge="1"
+                parent="1"
+                source="seq-p2"
+                target="seq-p1"
+                style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;endSize=8;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="730" y="180" as="sourcePoint" />
+            <mxPoint x="550" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 12. Sequence Reply Message: dashed=1;endArrow=open;endFill=0 -->
+        <mxCell id="edge-seq-reply"
+                value="KetQua"
+                edge="1"
+                parent="1"
+                source="seq-p2"
+                target="seq-p1"
+                style="html=1;verticalAlign=bottom;dashed=1;dashPattern=4 4;endArrow=open;endFill=0;endSize=8;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="730" y="210" as="sourcePoint" />
+            <mxPoint x="550" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Participant 3 (Newly created object): Starts at receipt point y=240, NOT at y=50! -->
+        <mxCell id="seq-p3"
+                value="HoaDon"
+                vertex="1"
+                parent="1"
+                style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontStyle=1;">
+          <mxGeometry x="850" y="240" width="90" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- 14. Sequence Create Message: dashed=1;endArrow=open;endFill=0 targeting seq-p3 -->
+        <mxCell id="edge-seq-create"
+                value="TaoHoaDon"
+                edge="1"
+                parent="1"
+                source="seq-p2"
+                target="seq-p3"
+                style="html=1;verticalAlign=bottom;dashed=1;dashPattern=4 4;endArrow=open;endFill=0;endSize=8;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="730" y="250" as="sourcePoint" />
+            <mxPoint x="850" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Destruction Occurrence at the end of Participant 2 Lifeline (y=310) -->
+        <mxCell id="seq-destroy"
+                value=""
+                vertex="1"
+                parent="1"
+                style="shape=umlDestroy;whiteSpace=wrap;html=1;">
+          <mxGeometry x="720" y="310" width="20" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- 15. Sequence Destroy Message: targets Destruction Occurrence (seq-destroy) -->
+        <mxCell id="edge-seq-destroy"
+                value="HuyDon"
+                edge="1"
+                parent="1"
+                source="seq-p1"
+                target="seq-destroy"
+                style="html=1;verticalAlign=bottom;endArrow=classic;endFill=1;endSize=8;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="320" as="sourcePoint" />
+            <mxPoint x="720" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+

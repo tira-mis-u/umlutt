@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0" type="device">
+  <diagram id="Test15" name="IndependentRectOverlap">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Independent rectangular node on parent=1 (solid default fill, NOT a container) -->
+        <mxCell id="node-outer" value="OuterClass" vertex="1" parent="1" style="shape=rect;whiteSpace=wrap;html=1;">
+          <mxGeometry x="100" y="100" width="200" height="150" as="geometry" />
+        </mxCell>
+        <!-- Independent node nested inside outer node on same parent=1 without XML parenting -->
+        <mxCell id="node-inner" value="InnerNode" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;">
+          <mxGeometry x="130" y="130" width="100" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+

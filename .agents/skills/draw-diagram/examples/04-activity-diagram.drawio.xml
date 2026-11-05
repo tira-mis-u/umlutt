@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0" type="device">
+  <diagram id="ActivityDiagramExample" name="ActivityDiagramExample">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Initial Node -->
+        <mxCell id="act-init"
+                value=""
+                vertex="1"
+                parent="1"
+                style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#000000;">
+          <mxGeometry x="50" y="85" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Action 1: TiepNhanDonHang -->
+        <mxCell id="act-tiep-nhan"
+                value="TiepNhanDonHang"
+                vertex="1"
+                parent="1"
+                style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;align=center;verticalAlign=middle;">
+          <mxGeometry x="120" y="78" width="140" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- Action 2: KiemTraTonKho -->
+        <mxCell id="act-kiem-kho"
+                value="KiemTraTonKho"
+                vertex="1"
+                parent="1"
+                style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;align=center;verticalAlign=middle;">
+          <mxGeometry x="300" y="78" width="140" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- Decision: KiemTraTonKho -->
+        <mxCell id="act-dec"
+                value=""
+                vertex="1"
+                parent="1"
+                style="rhombus;whiteSpace=wrap;html=1;">
+          <mxGeometry x="480" y="80" width="40" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Flow Final: Composite Vertex -->
+        <mxCell id="act-flow-final"
+                value=""
+                vertex="1"
+                connectable="1"
+                parent="1"
+                style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;container=1;collapsible=0;">
+          <mxGeometry x="485" y="190" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-final-diag1"
+                value=""
+                vertex="1"
+                connectable="0"
+                parent="act-flow-final"
+                style="shape=line;rotation=45;html=1;">
+          <mxGeometry x="0" y="14" width="30" height="2" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-final-diag2"
+                value=""
+                vertex="1"
+                connectable="0"
+                parent="act-flow-final"
+                style="shape=line;rotation=-45;html=1;">
+          <mxGeometry x="0" y="14" width="30" height="2" as="geometry" />
+        </mxCell>
+
+        <!-- Fork Bar (Synchronization Bar - vertical rect) -->
+        <mxCell id="act-fork"
+                value=""
+                vertex="1"
+                parent="1"
+                style="shape=rect;fillColor=#000000;strokeColor=#000000;">
+          <mxGeometry x="610" y="35" width="8" height="125" as="geometry" />
+        </mxCell>
+
+        <!-- Parallel Action 1: DongGoiSanPham -->
+        <mxCell id="act-dong-goi"
+                value="DongGoiSanPham"
+                vertex="1"
+                parent="1"
+                style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;align=center;verticalAlign=middle;">
+          <mxGeometry x="660" y="35" width="140" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- Parallel Action 2: XuatHoaDon -->
+        <mxCell id="act-xuat-hd"
+                value="XuatHoaDon"
+                vertex="1"
+                parent="1"
+                style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;align=center;verticalAlign=middle;">
+          <mxGeometry x="660" y="115" width="140" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- Join Bar (Synchronization Bar - vertical rect) -->
+        <mxCell id="act-join"
+                value=""
+                vertex="1"
+                parent="1"
+                style="shape=rect;fillColor=#000000;strokeColor=#000000;">
+          <mxGeometry x="840" y="35" width="8" height="125" as="geometry" />
+        </mxCell>
+
+        <!-- Action 3: GiaoHangChoKhach -->
+        <mxCell id="act-giao-hang"
+                value="GiaoHangChoKhach"
+                vertex="1"
+                parent="1"
+                style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;align=center;verticalAlign=middle;">
+          <mxGeometry x="890" y="75" width="140" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- Activity Final -->
+        <mxCell id="act-final"
+                value=""
+                vertex="1"
+                parent="1"
+                style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;">
+          <mxGeometry x="1070" y="82" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Edge 1: Init -> Action 1 -->
+        <mxCell id="edge-init-a1"
+                value=""
+                edge="1"
+                parent="1"
+                source="act-init"
+                target="act-tiep-nhan"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=8;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Edge 2: Action 1 -> Action 2 -->
+        <mxCell id="edge-a1-a2"
+                value=""
+                edge="1"
+                parent="1"
+                source="act-tiep-nhan"
+                target="act-kiem-kho"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=8;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Edge 3: Action 2 -> Decision -->
+        <mxCell id="edge-a2-dec"
+                value=""
+                edge="1"
+                parent="1"
+                source="act-kiem-kho"
+                target="act-dec"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=8;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Edge 4: Decision -> Flow Final [HetHang] -->
+        <mxCell id="edge-dec-final"
+                value="[HetHang]"
+                edge="1"
+                parent="1"
+                source="act-dec"
+                target="act-flow-final"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=8;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Edge 5: Decision -> Fork [ConHang] -->
+        <mxCell id="edge-dec-fork"
+                value="[ConHang]"
+                edge="1"
+                parent="1"
+                source="act-dec"
+                target="act-fork"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=8;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Edge 6: Fork -> DongGoi -->
+        <mxCell id="edge-fork-donggoi"
+                value=""
+                edge="1"
+                parent="1"
+                source="act-fork"
+                target="act-dong-goi"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=8;exitX=1;exitY=0.18;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Edge 7: Fork -> XuatHD -->
+        <mxCell id="edge-fork-xuathd"
+                value=""
+                edge="1"
+                parent="1"
+                source="act-fork"
+                target="act-xuat-hd"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=8;exitX=1;exitY=0.82;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Edge 8: DongGoi -> Join -->
+        <mxCell id="edge-donggoi-join"
+                value=""
+                edge="1"
+                parent="1"
+                source="act-dong-goi"
+                target="act-join"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=8;exitX=1;exitY=0.5;entryX=0;entryY=0.18;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Edge 9: XuatHD -> Join -->
+        <mxCell id="edge-xuathd-join"
+                value=""
+                edge="1"
+                parent="1"
+                source="act-xuat-hd"
+                target="act-join"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=8;exitX=1;exitY=0.5;entryX=0;entryY=0.82;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Edge 10: Join -> GiaoHang -->
+        <mxCell id="edge-join-giaohang"
+                value=""
+                edge="1"
+                parent="1"
+                source="act-join"
+                target="act-giao-hang"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=8;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Edge 11: GiaoHang -> Final -->
+        <mxCell id="edge-giaohang-final"
+                value=""
+                edge="1"
+                parent="1"
+                source="act-giao-hang"
+                target="act-final"
+                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=8;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

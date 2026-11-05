@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0" type="device">
+  <diagram id="RegressionSiblingCollision" name="RegressionSiblingCollision">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ========================================================= -->
+        <!-- Case A: Valid Flow Final Composite Vertex                -->
+        <!-- Parent circle container with 2 crossed line children      -->
+        <!-- Must be recognized as INTENTIONAL OVERLAY (no collision)  -->
+        <!-- ========================================================= -->
+        <mxCell id="act-flow-final"
+                value=""
+                vertex="1"
+                connectable="1"
+                parent="1"
+                style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;container=1;collapsible=0;">
+          <mxGeometry x="100" y="100" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-final-diag1"
+                value=""
+                vertex="1"
+                connectable="0"
+                parent="act-flow-final"
+                style="shape=line;rotation=45;html=1;">
+          <mxGeometry x="0" y="14" width="30" height="2" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-final-diag2"
+                value=""
+                vertex="1"
+                connectable="0"
+                parent="act-flow-final"
+                style="shape=line;rotation=-45;html=1;">
+          <mxGeometry x="0" y="14" width="30" height="2" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================================= -->
+        <!-- Case B: Invalid Sibling Overlap Inside Container         -->
+        <!-- Two independent non-connectable children in a container  -->
+        <!-- NOT Flow Final diagonals -> MUST trigger Collision Error  -->
+        <!-- ========================================================= -->
+        <mxCell id="test-container"
+                value="TestContainer"
+                vertex="1"
+                parent="1"
+                style="shape=rect;whiteSpace=wrap;html=1;container=1;">
+          <mxGeometry x="250" y="100" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-node-1"
+                value="SubNode1"
+                vertex="1"
+                connectable="0"
+                parent="test-container"
+                style="rounded=1;whiteSpace=wrap;html=1;">
+          <mxGeometry x="20" y="30" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-node-2"
+                value="SubNode2"
+                vertex="1"
+                connectable="0"
+                parent="test-container"
+                style="rounded=1;whiteSpace=wrap;html=1;">
+          <mxGeometry x="40" y="40" width="80" height="40" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+

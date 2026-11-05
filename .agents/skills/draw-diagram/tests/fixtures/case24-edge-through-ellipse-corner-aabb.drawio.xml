@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0" type="device">
+  <diagram id="Test24" name="EdgeThroughEllipseCornerAabb">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Situation A: Edge cuts through AABB corner [100..200] x [100..160] but stays outside true ellipse -->
+        <!-- Center (70, 160), bounds [50..90] x [147..173] -->
+        <mxCell id="src-node24-a" value="S1" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;">
+          <mxGeometry x="50" y="147" width="40" height="26" as="geometry" />
+        </mxCell>
+        <!-- Ellipse Use Case at (100, 100), width=100, height=60. Center at (150, 130). Semi-axes a=50, b=30. AABB is [100..200] x [100..160] -->
+        <mxCell id="ellipse-node" value="UseCase" vertex="1" parent="1" style="ellipse;whiteSpace=wrap;html=1;">
+          <mxGeometry x="100" y="100" width="100" height="60" as="geometry" />
+        </mxCell>
+        <!-- Center (140, 55), bounds [120..160] x [42..68] -->
+        <mxCell id="tgt-node24-a" value="E1" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;">
+          <mxGeometry x="120" y="42" width="40" height="26" as="geometry" />
+        </mxCell>
+        <!-- Segment from center (70, 160) to center (140, 55). Penetrates AABB corner at (100, 115.0) to (110.0, 100). -->
+        <!-- Normalized closest distance to center is 55.709 px > a=50. Clearance is 5.709 px (> 5 px). MUST NOT trigger collision -->
+        <mxCell id="edge-corner-clip" value="" edge="1" parent="1" source="src-node24-a" target="tgt-node24-a" style="edgeStyle=none;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Situation B: Edge cuts through the interior of the ellipse -->
+        <!-- Center (30, 130), bounds [10..50] x [117..143] -->
+        <mxCell id="src-node24-b" value="S2" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;">
+          <mxGeometry x="10" y="117" width="40" height="26" as="geometry" />
+        </mxCell>
+        <!-- Center (260, 130), bounds [240..280] x [117..143] -->
+        <mxCell id="tgt-node24-b" value="E2" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;">
+          <mxGeometry x="240" y="117" width="40" height="26" as="geometry" />
+        </mxCell>
+        <!-- Segment from (30, 130) to (260, 130) cutting straight through ellipse center (150, 130). MUST trigger Edge-Node Collision -->
+        <mxCell id="edge-cutting-through" value="" edge="1" parent="1" source="src-node24-b" target="tgt-node24-b" style="edgeStyle=none;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0" type="device">
+  <diagram id="WireframeDashboardExample" name="WireframeDashboardExample">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Screen Container: ManHinhQuanLyDonHang -->
+        <mxCell id="screen-don-hang"
+                value="ManHinhQuanLyDonHang"
+                vertex="1"
+                parent="1"
+                style="shape=rect;whiteSpace=wrap;html=1;container=1;collapsible=0;verticalAlign=top;spacingTop=8;fontStyle=1;fillColor=none;strokeColor=#000000;">
+          <mxGeometry x="60" y="50" width="800" height="540" as="geometry" />
+        </mxCell>
+
+        <!-- Top Header Bar -->
+        <mxCell id="header-bar"
+                value="He Thong Quan Ly Ban Hang | Nguoi dung: NhanVien01"
+                vertex="1"
+                parent="screen-don-hang"
+                style="shape=rect;whiteSpace=wrap;html=1;align=left;spacingLeft=12;verticalAlign=middle;fontStyle=1;">
+          <mxGeometry x="20" y="40" width="760" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Navigation Sidebar -->
+        <mxCell id="sidebar-nav"
+                value="&lt;b&gt;DANH MUC&lt;/b&gt;&lt;hr&gt;[ Trang Chu ]&lt;br&gt;&lt;b&gt;[ Don Hang (x) ]&lt;/b&gt;&lt;br&gt;[ San Pham ]&lt;br&gt;[ Khach Hang ]&lt;br&gt;[ Bao Cao ]"
+                vertex="1"
+                parent="screen-don-hang"
+                style="shape=rect;whiteSpace=wrap;html=1;align=left;spacingLeft=10;verticalAlign=top;spacingTop=10;">
+          <mxGeometry x="20" y="90" width="150" height="430" as="geometry" />
+        </mxCell>
+
+        <!-- Search Input -->
+        <mxCell id="input-search"
+                value="[ Nhap ma don hang, ten khach... ]"
+                vertex="1"
+                parent="screen-don-hang"
+                style="shape=rect;whiteSpace=wrap;html=1;align=left;spacingLeft=8;verticalAlign=middle;">
+          <mxGeometry x="190" y="90" width="310" height="36" as="geometry" />
+        </mxCell>
+
+        <!-- Search Button -->
+        <mxCell id="btn-search"
+                value="NutTimKiem"
+                vertex="1"
+                parent="screen-don-hang"
+                style="shape=rect;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontStyle=1;">
+          <mxGeometry x="510" y="90" width="110" height="36" as="geometry" />
+        </mxCell>
+
+        <!-- Create Button -->
+        <mxCell id="btn-create"
+                value="NutTaoDonHang"
+                vertex="1"
+                parent="screen-don-hang"
+                style="shape=rect;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontStyle=1;">
+          <mxGeometry x="630" y="90" width="150" height="36" as="geometry" />
+        </mxCell>
+
+        <!-- Data Grid: BangDanhSachDonHang -->
+        <mxCell id="grid-orders"
+                value="&lt;table border=&quot;1&quot; width=&quot;100%&quot; style=&quot;border-collapse:collapse;text-align:left;&quot;&gt;&lt;tr style=&quot;background:#eee;&quot;&gt;&lt;th&gt;MaDonHang&lt;/th&gt;&lt;th&gt;KhachHang&lt;/th&gt;&lt;th&gt;NgayDat&lt;/th&gt;&lt;th&gt;TongTien&lt;/th&gt;&lt;th&gt;TrangThai&lt;/th&gt;&lt;th&gt;ThaoTac&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;DH001&lt;/td&gt;&lt;td&gt;Nguyen Van A&lt;/td&gt;&lt;td&gt;04/11/2026&lt;/td&gt;&lt;td&gt;1.500.000d&lt;/td&gt;&lt;td&gt;ChoXacNhan&lt;/td&gt;&lt;td&gt;[ Xem ] [ Huy ]&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;DH002&lt;/td&gt;&lt;td&gt;Tran Thi B&lt;/td&gt;&lt;td&gt;04/11/2026&lt;/td&gt;&lt;td&gt;850.000d&lt;/td&gt;&lt;td&gt;DangGiaoHang&lt;/td&gt;&lt;td&gt;[ Xem ]&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;DH003&lt;/td&gt;&lt;td&gt;Le Van C&lt;/td&gt;&lt;td&gt;03/11/2026&lt;/td&gt;&lt;td&gt;2.300.000d&lt;/td&gt;&lt;td&gt;DaHoanThanh&lt;/td&gt;&lt;td&gt;[ Xem ]&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;"
+                vertex="1"
+                parent="screen-don-hang"
+                style="shape=rect;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=4;spacingTop=4;">
+          <mxGeometry x="190" y="140" width="590" height="330" as="geometry" />
+        </mxCell>
+
+        <!-- Pagination Bar -->
+        <mxCell id="bar-pagination"
+                value="Trang 1 / 10 | [ &amp;lt; Truoc ] [ 1 ] [ 2 ] [ 3 ] [ Sau &amp;gt; ]"
+                vertex="1"
+                parent="screen-don-hang"
+                style="shape=rect;whiteSpace=wrap;html=1;align=right;spacingRight=12;verticalAlign=middle;">
+          <mxGeometry x="190" y="484" width="590" height="36" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+
