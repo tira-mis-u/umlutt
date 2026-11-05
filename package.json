@@ -3,6 +3,19 @@
   "version": "0.1.0",
   "description": "Kho lưu trữ Agent Skills chuẩn hóa bằng tiếng Việt dành cho các AI Coding Agents",
   "type": "module",
+  "bin": {
+    "viet-agent-skills": "./bin/cli.mjs",
+    "vas": "./bin/cli.mjs"
+  },
+  "files": [
+    "bin",
+    ".agents",
+    ".claude",
+    "scripts",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "README.md"
+  ],
   "scripts": {
     "test": "node .agents/skills/draw-diagram/tests/test_targeted_mappings.mjs && node .agents/skills/draw-diagram/tests/test_e2e_pipeline.mjs",
     "test:targeted": "node .agents/skills/draw-diagram/tests/test_targeted_mappings.mjs",

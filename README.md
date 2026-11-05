@@ -205,6 +205,8 @@ The actual repository layout is structured as follows:
 |       |-- system-analysis-survey/
 |       |-- system-analysis-ui/
 |       `-- system-analysis-uml/
+|-- bin/
+|   `-- cli.mjs
 |-- scripts/
 |   |-- .gitkeep
 |   `-- export_diagram.mjs
@@ -218,6 +220,23 @@ The actual repository layout is structured as follows:
 ---
 
 ## 7. Installation & Requirements
+
+### Automated Installation via NPX
+The quickest way to add Viet Agent Skills to an existing project is using `npx`:
+
+```bash
+# Initialize and install all skills into the current workspace:
+npx viet-agent-skills init
+
+# Install a specific skill (e.g., Draw.io rendering engine):
+npx viet-agent-skills add draw-diagram
+
+# Run environment diagnosis (Node.js, PowerShell, Draw.io Desktop CLI):
+npx viet-agent-skills doctor
+
+# List all available skills:
+npx viet-agent-skills list
+```
 
 ### Prerequisites
 - **Node.js:** v18.0.0 or later (v20.x LTS recommended). ES module support enabled.
