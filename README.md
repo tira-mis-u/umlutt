@@ -1,4 +1,4 @@
-# Viet Agent Skills: System Analysis & Draw.io Diagram Pipeline
+# umlutt: System Analysis & Draw.io Diagram Pipeline
 
 A standardized Agent Skills library providing domain-specific workflows, structural rules, and rendering tooling for Information Systems Analysis and Design (Phan Tich va Thiet Ke He Thong Thong Tin - PTTKHTTT) course projects. Designed for interoperability across modern AI coding agents, including Google Antigravity / Gemini CLI, Anthropic Claude Code, and OpenAI Codex.
 
@@ -222,20 +222,20 @@ The actual repository layout is structured as follows:
 ## 7. Installation & Requirements
 
 ### Automated Installation via NPX
-The quickest way to add Viet Agent Skills to an existing project is using `npx`:
+The quickest way to add the skills to an existing project is using `npx`:
 
 ```bash
 # Initialize and install all skills into the current workspace:
-npx viet-agent-skills init
+npx umlutt init
 
 # Install a specific skill (e.g., Draw.io rendering engine):
-npx viet-agent-skills add draw-diagram
+npx umlutt add draw-diagram
 
 # Run environment diagnosis (Node.js, PowerShell, Draw.io Desktop CLI):
-npx viet-agent-skills doctor
+npx umlutt doctor
 
 # List all available skills:
-npx viet-agent-skills list
+npx umlutt list
 ```
 
 ### Prerequisites

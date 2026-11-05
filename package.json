@@ -1,11 +1,11 @@
 {
-  "name": "viet-agent-skills",
+  "name": "umlutt",
   "version": "0.1.0",
   "description": "Kho lưu trữ Agent Skills chuẩn hóa bằng tiếng Việt dành cho các AI Coding Agents",
   "type": "module",
   "bin": {
-    "viet-agent-skills": "./bin/cli.mjs",
-    "vas": "./bin/cli.mjs"
+    "umlutt": "./bin/cli.mjs",
+    "utt": "./bin/cli.mjs"
   },
   "files": [
     "bin",

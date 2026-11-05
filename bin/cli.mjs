@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 /**
- * Viet Agent Skills CLI
+ * umlutt CLI
  * 
- * Interactive installer and manager for Vietnamese Information System Analysis & Design
+ * Interactive installer and manager for UML UTT Information System Analysis & Design
  * Agent Skills. Supports Google Antigravity / Gemini CLI, Anthropic Claude Code, and OpenAI Codex.
  */
 
@@ -104,8 +104,8 @@ const SKILL_CATALOG = [
  */
 function printHeader() {
   console.log(`\n${color.cyan}${color.bold}======================================================${color.reset}`);
-  console.log(`${color.cyan}${color.bold}   VIET AGENT SKILLS CLI - v${PACKAGE_VERSION}${color.reset}`);
-  console.log(`${color.dim}   Thư viện kỹ năng AI Phân tích & Thiết kế HTTT${color.reset}`);
+  console.log(`${color.cyan}${color.bold}   UMLUTT CLI - v${PACKAGE_VERSION}${color.reset}`);
+  console.log(`${color.dim}   Thư viện kỹ năng AI Phân tích & Thiết kế HTTT (UML UTT)${color.reset}`);
   console.log(`${color.cyan}${color.bold}======================================================${color.reset}\n`);
 }
 
@@ -115,7 +115,7 @@ function printHeader() {
 function printHelp() {
   printHeader();
   console.log(`${color.bold}SỬ DỤNG:${color.reset}`);
-  console.log(`  npx viet-agent-skills [lệnh] [tùy chọn]\n`);
+  console.log(`  npx umlutt [lệnh] [tùy chọn]\n`);
   console.log(`${color.bold}CÁC LỆNH CHÍNH:${color.reset}`);
   console.log(`  ${color.green}init, install${color.reset}      Cài đặt toàn bộ bộ kỹ năng và quy tắc vào dự án hiện tại`);
   console.log(`  ${color.green}add <skill>${color.reset}        Cài đặt một kỹ năng cụ thể (kèm các rules phụ thuộc)`);
@@ -132,11 +132,11 @@ function printHelp() {
   console.log(`  ${color.yellow}-h, --help${color.reset}         Hiển thị hướng dẫn này\n`);
   console.log(`${color.bold}VÍ DỤ:${color.reset}`);
   console.log(`  ${color.dim}# Cài đặt trọn gói toàn bộ hệ sinh thái vào dự án hiện tại:${color.reset}`);
-  console.log(`  npx viet-agent-skills init\n`);
+  console.log(`  npx umlutt init\n`);
   console.log(`  ${color.dim}# Chỉ cài đặt kỹ năng vẽ biểu đồ Draw.io:${color.reset}`);
-  console.log(`  npx viet-agent-skills add draw-diagram\n`);
+  console.log(`  npx umlutt add draw-diagram\n`);
   console.log(`  ${color.dim}# Kiểm tra các công cụ hạ tầng trên máy:${color.reset}`);
-  console.log(`  npx viet-agent-skills doctor\n`);
+  console.log(`  npx umlutt doctor\n`);
 }
 
 /**
@@ -153,8 +153,8 @@ function listSkills() {
     console.log(`    Lệnh kích hoạt: ${color.green}${s.trigger}${color.reset}\n`);
   }
 
-  console.log(`${color.dim}Để cài đặt một skill: npx viet-agent-skills add <tên-skill>${color.reset}`);
-  console.log(`${color.dim}Để cài đặt toàn bộ:  npx viet-agent-skills init${color.reset}\n`);
+  console.log(`${color.dim}Để cài đặt một skill: npx umlutt add <tên-skill>${color.reset}`);
+  console.log(`${color.dim}Để cài đặt toàn bộ:  npx umlutt init${color.reset}\n`);
 }
 
 /**
@@ -164,7 +164,7 @@ function infoSkill(skillName) {
   const s = SKILL_CATALOG.find(x => x.name.toLowerCase() === skillName.toLowerCase());
   if (!s) {
     console.error(`\n${color.red}[LỖI] Không tìm thấy skill '${skillName}'.${color.reset}`);
-    console.log(`Chạy ${color.yellow}npx viet-agent-skills list${color.reset} để xem danh sách kỹ năng khả dụng.\n`);
+    console.log(`Chạy ${color.yellow}npx umlutt list${color.reset} để xem danh sách kỹ năng khả dụng.\n`);
     process.exit(1);
   }
 
@@ -418,13 +418,13 @@ function main() {
       const skillName = args[1];
       if (!skillName) {
         console.error(`\n${color.red}[LỖI] Vui lòng chỉ định tên skill cần cài đặt.${color.reset}`);
-        console.log(`Ví dụ: ${color.yellow}npx viet-agent-skills add draw-diagram${color.reset}\n`);
+        console.log(`Ví dụ: ${color.yellow}npx umlutt add draw-diagram${color.reset}\n`);
         process.exit(1);
       }
       const matched = SKILL_CATALOG.find(x => x.name.toLowerCase() === skillName.toLowerCase());
       if (!matched) {
         console.error(`\n${color.red}[LỖI] Kỹ năng '${skillName}' không tồn tại trong danh mục.${color.reset}`);
-        console.log(`Chạy ${color.yellow}npx viet-agent-skills list${color.reset} để xem các skill khả dụng.\n`);
+        console.log(`Chạy ${color.yellow}npx umlutt list${color.reset} để xem các skill khả dụng.\n`);
         process.exit(1);
       }
       runInstall(matched.name, { force, dryRun, agentsOnly, claudeOnly });
@@ -454,7 +454,7 @@ function main() {
     case '-v':
     case '--version':
     case 'version':
-      console.log(`viet-agent-skills v${PACKAGE_VERSION}`);
+      console.log(`umlutt v${PACKAGE_VERSION}`);
       break;
 
     case '-h':
