@@ -13,8 +13,7 @@
   },
   "homepage": "https://github.com/tira-mis-u/umlutt#readme",
   "bin": {
-    "umlutt": "./bin/cli.mjs",
-    "utt": "./bin/cli.mjs"
+    "umlutt": "./bin/cli.mjs"
   },
   "files": [
     "bin",
